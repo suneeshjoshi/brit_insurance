@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+<h2>Login to Item App</h2>
+<form action="/signup" method="get">
+    <button class="orange-button" type="submit">Sign Up</button>
+</form>
+
+<div>
+    <form action="/login" method="post">
+        <table>
+            <tr>
+                <td class=orange-box>
+                    <label for="username">Username:</label><br>
+                    <input type="text" id="username" name="username" required>
+                    <br><br>
+                </td>
+                <td>
+                </td>
+                <td class=orange-box>
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" required>
+                    <br><br>
+                </td>
+        </table>
+        <br>
+        <button class="orange-button" type="submit">Login</button>
+        <br>
+
+    </form>
+</div>
+<br>
+<br>
+</body>
+</html>

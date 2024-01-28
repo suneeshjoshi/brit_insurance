@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Success</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+<h2>Login Success</h2>
+<div class="center-container">
+    <div class="message">
+        <p>Welcome, {{ username }}!</p>
+        <p>New Session created, token = {{ token }}</p>
+        <p>Please enter the values to be added</p>
+
+        <a href="/display/token={{ token }}">Item App Page</a>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item App</title>
+    <link rel="stylesheet" type="text/css" href="/static/base-styles.css">
+</head>
+
+<body>
+<div>
+    <h1>Item App</h1>
+    <hr>
+    <table class="custom-table-2">
+        <tr>
+            <td>
+                Active Session Id / Token = {{ token }}
+            </td>
+            <td>
+                <form action="/logout" method="post">
+                    <input type="hidden" name="token" value="{{ token }}">
+                    <button class="orange-button" type="submit">Logout</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+
+    <table class="custom-table">
+        <tr>
+            <th>Item</th>
+            <th>Price (£)</th>
+            <th>Session Token</th>
+            <th>Session Info</th>
+            <th>Delete</th>
+        </tr>
+
+        {% for item in item_list %}
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>{{ item.value }}</td>
+                <td>{{ item.token }}</td>
+                {% if item.token == token %}
+                    <td>Active Session</td>
+                {% else %}
+                    <td>Previous Session</td>
+                {% endif %}
+                <td><a class="orange-button" href="/delete/{{ item.id }}/{{ item.token }}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <br><br>
+
+    <div>
+        <form action="/add" method="post" onsubmit="validateForm()">
+            <div class="custom-table">
+                <label>Item Title</label>
+                <input type="text" name="item_name" placeholder="Enter Item..." required>
+                <input type="text" name="value_amount" placeholder="Enter Value..." required>
+                <input type="hidden" name="token" value="{{ token }}">
+                <button class="orange-button" type="submit">Add</button>
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <form action="/summary" method="post">
+            <input type="hidden" name="token" value="{{ token }}">
+            <button class="orange-button" type="submit">Summary</button>
+        </form>
+    </div>
+
+
+</div>
+</body>
+</html>
+
+
+
