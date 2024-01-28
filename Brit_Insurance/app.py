@@ -44,6 +44,12 @@ def get_db():
         db.close()
 
 
+# Endpoint for displaying items
+@app.get("/health")
+def health():
+    return {"message": "OK"}
+
+
 # Endpoint for displaying result
 @app.get("/result/{total}/{number_of_items}/{token}")
 def result(request: Request,
