@@ -20,6 +20,7 @@
    sum them up together.
 9. The application was also tested with concurrent users accessing the application and both users were only provided the
    sum of either own respective item entries (utilizing the session tokens)
+10. User can also see all the items added from previous session ,and an ability to delete item has also been introduced.
 
 # Screenshot of the application running on AWS EC2
 
