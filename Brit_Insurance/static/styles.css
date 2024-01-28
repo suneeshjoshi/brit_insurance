@@ -1,0 +1,60 @@
+/* styles.css */
+body, html {
+    background-color: blue;
+    padding: 0;
+    height: 100%;
+    margin: 0;
+    align-items: center;
+}
+
+h2 {
+    /*color: white;*/
+    font-weight: bold;
+}
+
+.orange-box {
+    background-color: orange;
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    margin-right: 5px;
+}
+
+button, a.orange-button {
+    background-color: orange;
+    color: white;
+    padding: 2% 1%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: medium;
+}
+
+button:hover, a.orange-button:hover {
+    background-color: darkorange;
+}
+
+
+body {
+    background-color: blue;
+}
+
+.center-container {
+    text-align: center;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+
+.message {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 40%;
+}

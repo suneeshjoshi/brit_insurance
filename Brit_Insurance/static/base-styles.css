@@ -1,0 +1,58 @@
+body, html {
+    background-color: blue; /* Set background color to blue */
+    height: 100%;
+    margin: 0;
+}
+
+h1 {
+    font-weight: bold;
+    color: white;
+    align-content: center;
+}
+
+.custom-table-2 {
+    border: chocolate;
+    border-width: thick;
+    width: 75%; /* Set table width to 100% of its container */
+    border-collapse: collapse; /* Collapse table borders into a single border */
+    align-self: center;
+}
+
+.custom-table-2 th, .custom-table-2 td {
+    font-weight: bold;
+    color: navajowhite;
+    align-content: center;
+}
+
+button, a.orange-button {
+    background-color: orange; /* Set button background color to orange */
+    color: white; /* Set button text color to white */
+    padding: 2% 1%; /* Add padding to the button */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Add border radius to button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    text-decoration: none; /* Remove underline from anchor */
+    font-size: medium;
+}
+
+button:hover, a.orange-button:hover {
+    background-color: darkorange; /* Change button background color on hover */
+}
+
+.custom-table {
+    width: 75%; /* Set table width to 100% of its container */
+    border-collapse: collapse; /* Collapse table borders into a single border */
+    background-color: white; /* Set table background color to white */
+    align-self: center;
+}
+
+.custom-table th, .custom-table td {
+    border: 1px solid black; /* Add border to table cells */
+    padding: 8px; /* Add padding to table cells */
+}
+
+.custom-table th {
+    background-color: #f2f2f2; /* Set background color for table header cells */
+    font-weight: bolder;
+}
+
