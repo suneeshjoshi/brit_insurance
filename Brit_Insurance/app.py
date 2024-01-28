@@ -1,4 +1,5 @@
 import uuid
+from typing import Union
 
 import uvicorn
 from fastapi import FastAPI, Depends, Request, Form, status
@@ -46,7 +47,7 @@ def get_db():
 # Endpoint for displaying result
 @app.get("/result/{total}/{number_of_items}/{token}")
 def result(request: Request,
-           total: float | int,
+           total: Union[float, int],
            number_of_items: int,
            token: str):
     """
@@ -100,7 +101,7 @@ def check_valid_user_session(token: str,
 @app.post("/add")
 def add(request: Request,
         item_name: str = Form(...),
-        value_amount: float | int = Form(...),
+        value_amount: Union[float, int] = Form(...),
         token: str = Form(...),
         db: Session = Depends(get_db)):
     """
